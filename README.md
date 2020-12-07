@@ -1,6 +1,6 @@
 # Grunt Starter
 
-## A quick starter for new projects
+## A quick `gruntfile.js` for new projects
 
 ### Dependencies
 
@@ -12,19 +12,36 @@
 -   grunt-contrib-watch
 -   grunt-contrib-connect
 
-### Live Reload
-
-Live Reload (`grunt-contrib-connect`) is enbled. Delete if you don't want to use this.
-
 ---
 
 ### Getting Started
 
 ```bash
-git clone git@github.com:angelajholden/grunt.git
-npm install
-npm update --save-dev
+npm init -y
+
+npm i -D node-sass grunt-sass grunt-contrib-concat grunt-contrib-uglify grunt-autoprefixer grunt-contrib-watch grunt-contrib-connect
 ```
+
+---
+
+### `.gitignore`
+
+```git
+node_modules
+tmp
+.tmp
+.npm-debug.log
+.sass-cache
+*.css.map
+```
+
+---
+
+### Live Reload
+
+Listens on `port: 8000` by default
+
+---
 
 ### Edit Folders
 
@@ -40,6 +57,8 @@ components/
 ```
 
 ### Compiled Folders
+
+---
 
 ```
 dist/

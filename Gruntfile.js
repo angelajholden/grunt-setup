@@ -72,7 +72,6 @@ module.exports = function (grunt) {
             scripts: {
                 files: [
                     "*.html",
-                    "dist/css/*.css",
                     "components/js/*.js",
                     "components/scss/*.scss",
                 ],
