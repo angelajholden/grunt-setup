@@ -31,7 +31,7 @@ node_modules
 tmp
 .tmp
 .npm-debug.log
-.sass-cache
+*.sass-cache
 *.css.map
 ```
 
@@ -47,13 +47,14 @@ Listens on `port: 8000` by default
 
 ```
 components/
--- scripts/
-    -- script.js
-    -- your_scripts.js
--- scss/
-    -- _your_partials.scss
-    -- _main.scss
-    -- styles.scss
+|__ scripts/
+    |__ script.js
+    |__ your_scripts.js
+
+|__ scss/
+    |__ _your_partials.scss
+    |__ _main.scss
+    |__ styles.scss
 ```
 
 ### Compiled Folders
@@ -62,13 +63,14 @@ components/
 
 ```
 dist/
--- js/
-    -- scripts.js
-    -- scripts.min.js
-    -- scripts.min.js.map
--- css/
-    -- styles.css
-    -- styles.map.css
+|__ js/
+    |__ scripts.js
+    |__ scripts.min.js
+    |__ scripts.min.js.map
+
+|__ css/
+    |__ styles.css
+    |__ styles.map.css
 ```
 
 Cheers!  
