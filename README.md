@@ -1,4 +1,4 @@
-# Grunt Starter
+# Grunt Starter :cherry_blossom:
 
 ## A quick `gruntfile.js` for new projects
 
