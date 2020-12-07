@@ -22,6 +22,10 @@ npm install
 npm update --save-dev
 ```
 
+### Live Reload
+
+Live Reload (grunt-contrib-connect) is enbled. Delete if you don't want to use this.
+
 ### Edit Folders
 
 ```
