@@ -30,26 +30,26 @@ npm update --save-dev
 
 ```
 components/
-    -- scripts/
-        -- script.js
-        -- your_scripts.js
-    -- scss/
-        -- _your_partials.scss
-        -- _main.scss
-        -- styles.scss
+-- scripts/
+    -- script.js
+    -- your_scripts.js
+-- scss/
+    -- _your_partials.scss
+    -- _main.scss
+    -- styles.scss
 ```
 
 ### Compiled Folders
 
 ```
 dist/
-    -- js/
-        -- scripts.js
-        -- scripts.min.js
-        -- scripts.min.js.map
-    -- css/
-        -- styles.css
-        -- styles.map.css
+-- js/
+    -- scripts.js
+    -- scripts.min.js
+    -- scripts.min.js.map
+-- css/
+    -- styles.css
+    -- styles.map.css
 ```
 
 Cheers!  
