@@ -1,79 +1,97 @@
-module.exports = function(grunt) {
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
-		/**
-		* Sass Task
-		*/
-		sass: {
-			dist: {
-				options: {
-					style: 'compressed',
-					sourcemap: 'auto',
-				},
-				files: {
-					'compiled/style.css': 'scss/style.scss'
-				}
-			}
-		},
-		/**
-		* Compile JS files
-		*/
-	    concat: {
-	      options: {
-	        stripBanners: true
-	      },
-	      js : {
-	        files: {
-	          'compiled/base.js':
-	          [
-	            'js/*.js',
-	          ]
-	        }
-	      }
-	    },
-		/**
-		* Minify compiled JS file
-		*/
-	    uglify : {
-	      js: {
-	        files: {
-	          'compiled/base.min.js': ['compiled/base.js'],
-	        }
-	      }
-	    },
-		/**
-		* Autoprefixer
-		*/
-		autoprefixer: {
-			options: {
-				browsers: ['last 2 versions'],
-				map: true,
-			},
-			multiple_files: {
-				expand: true,
-				flatten: true,
-				src: 'compiled/*.css',
-				dest: '',
-			}
-		},
-		/**
-		* Watch Task
-		*/
-		watch: {
-			css: {
-				files: '**/*.scss',
-				tasks: ['sass', 'autoprefixer']
-			},
-			js: {
-				files: 'js/*.js',
-				tasks: ['concat', 'uglify']
-			}
-		}
-	});
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.registerTask('default', ['watch']);
-}
+module.exports = function (grunt) {
+    const sass = require("node-sass");
+    grunt.initConfig({
+        concat: {
+            options: {
+                //options go here
+            },
+            dist: {
+                src: ["components/scripts/*.js"],
+                dest: "dist/js/scripts.js",
+            },
+        }, //concat js
+
+        uglify: {
+            options: {
+                sourceMap: true,
+            },
+            dist: {
+                files: [
+                    {
+                        src: "dist/js/scripts.js",
+                        dest: "dist/js/scripts.min.js",
+                    },
+                ],
+            },
+        }, //uglify js
+
+        sass: {
+            options: {
+                implementation: sass,
+                sourceMap: true,
+                outputStyle: "compressed",
+            },
+            dist: {
+                files: [
+                    {
+                        src: "components/scss/styles.scss",
+                        dest: "dist/css/styles.min.css",
+                    },
+                ],
+            },
+        }, //sass
+
+        autoprefixer: {
+            options: {
+                browsers: ["last 4 versions"],
+                map: true,
+            },
+            files: {
+                src: "dist/css/*.css",
+                dest: "",
+            },
+        }, //autoprefixer
+
+        connect: {
+            server: {
+                options: {
+                    hostname: "127.0.0.1",
+                    port: "8000",
+                    useAvailablePort: true,
+                    base: "./",
+                    livereload: true,
+                },
+            },
+        }, //livereload
+
+        watch: {
+            options: {
+                spawn: false,
+                livereload: true,
+            },
+            scripts: {
+                files: [
+                    "dist/",
+                    "components/js/*.js",
+                    "components/scss/*.scss",
+                ],
+                tasks: ["concat", "uglify", "sass", "autoprefixer", "connect"],
+            },
+        }, //watch
+    }); //initConfig
+
+    grunt.loadNpmTasks("grunt-contrib-concat");
+    grunt.loadNpmTasks("grunt-contrib-uglify");
+    grunt.loadNpmTasks("grunt-sass");
+    grunt.loadNpmTasks("grunt-autoprefixer");
+    grunt.loadNpmTasks("grunt-contrib-watch");
+    grunt.loadNpmTasks("grunt-contrib-connect");
+    grunt.registerTask("default", [
+        "concat",
+        "uglify",
+        "sass",
+        "autoprefixer",
+        "connect",
+        "watch",
+    ]);
+}; //wrapper function
