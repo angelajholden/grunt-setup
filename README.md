@@ -4,6 +4,14 @@
 
 ### Dependencies
 
+-   grunt
+-   grunt-cli
+
+### Dev Dependencies
+
+`diff` is an outdated dependency that will be flagged by Github as a vulnerability.
+
+-   diff
 -   node-sass
 -   grunt-sass
 -   grunt-contrib-concat
@@ -19,7 +27,9 @@
 ```bash
 npm init -y
 
-npm i -D node-sass grunt-sass grunt-contrib-concat grunt-contrib-uglify grunt-autoprefixer grunt-contrib-watch grunt-contrib-connect
+npm i grunt grunt-cli
+
+npm i -D diff node-sass grunt-sass grunt-contrib-concat grunt-contrib-uglify grunt-autoprefixer grunt-contrib-watch grunt-contrib-connect
 ```
 
 ---
@@ -33,6 +43,7 @@ tmp
 .npm-debug.log
 *.sass-cache
 *.css.map
+*.min.js.map
 ```
 
 ---

@@ -72,7 +72,7 @@ module.exports = function (grunt) {
             scripts: {
                 files: [
                     "*.html",
-                    "components/js/*.js",
+                    "components/scripts/*.js",
                     "components/scss/*.scss",
                 ],
                 tasks: ["concat", "uglify", "sass", "autoprefixer", "connect"],
