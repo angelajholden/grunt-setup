@@ -68,9 +68,9 @@ components/
     |__ styles.scss
 ```
 
-### Compiled Folders
-
 ---
+
+### Compiled Folders
 
 ```
 dist/
