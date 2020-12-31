@@ -9,27 +9,39 @@
 
 ### Dev Dependencies
 
-`diff` is an outdated dependency that will be flagged by Github as a vulnerability.
-
--   diff
 -   node-sass
 -   grunt-sass
 -   grunt-contrib-concat
--   grunt-contrib-uglify
+-   gruntjs/grunt-contrib-uglify#harmony
 -   grunt-autoprefixer
 -   grunt-contrib-watch
 -   grunt-contrib-connect
 
 ---
 
-### Getting Started
+### To Do
+
+-   Find new Uglify package for JS
+-   Check all packages for updates
+
+---
+
+### Use this Repo
+
+```bash
+git clone git@github.com:angelajholden/grunt-setup.git
+
+npm update
+```
+
+### Or Start from Scratch
 
 ```bash
 npm init -y
 
 npm i grunt grunt-cli
 
-npm i -D diff node-sass grunt-sass grunt-contrib-concat grunt-contrib-uglify grunt-autoprefixer grunt-contrib-watch grunt-contrib-connect
+npm i -D node-sass grunt-sass grunt-contrib-concat gruntjs/grunt-contrib-uglify#harmony grunt-autoprefixer grunt-contrib-watch grunt-contrib-connect
 ```
 
 ---
@@ -37,6 +49,7 @@ npm i -D diff node-sass grunt-sass grunt-contrib-concat grunt-contrib-uglify gru
 ### `.gitignore`
 
 ```git
+.DS_Store
 node_modules
 tmp
 .tmp
