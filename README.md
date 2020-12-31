@@ -55,6 +55,8 @@ In the terminal type `grunt` to start watching your files. The output should loo
 
 ### `.gitignore`
 
+Remember to add a `.gitignore` file before you `git init` your project.
+
 ```git
 .DS_Store
 node_modules
