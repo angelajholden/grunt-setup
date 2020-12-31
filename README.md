@@ -1,4 +1,4 @@
-# Grunt Starter :cherry_blossom:
+# Grunt Setup :cherry_blossom:
 
 ## A quick `gruntfile.js` for new projects
 
@@ -35,7 +35,7 @@ git clone git@github.com:angelajholden/grunt-setup.git
 npm update
 ```
 
-### Or Start from Scratch
+### Start from Scratch
 
 ```bash
 npm init -y
@@ -44,6 +44,12 @@ npm i grunt grunt-cli
 
 npm i -D diff node-sass grunt-sass grunt-contrib-concat gruntjs/grunt-contrib-uglify#harmony grunt-autoprefixer grunt-contrib-watch grunt-contrib-connect
 ```
+
+### On your marks, get set... GO!
+
+In the terminal type `grunt` to start watching your files. The output should look something like this.
+
+![Grunt running in the terminal](/grunt-in-terminal.png)
 
 ---
 
@@ -64,11 +70,17 @@ tmp
 
 ### Live Reload
 
-Listens on `port: 8000` by default
+Listens on `port: 8000` by default. Double check the grunt terminal output to be sure.
+
+```bash
+http://127.0.0.1:8000
+```
 
 ---
 
-### Edit Folders
+### Source Folders
+
+Create directories and files to edit your SCSS and JavaScript using this structure.
 
 ```
 components/
@@ -85,6 +97,8 @@ components/
 ---
 
 ### Compiled Folders
+
+Grunt will compile your SCSS and JavaScript like this.
 
 ```
 dist/
