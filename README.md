@@ -9,6 +9,7 @@
 
 ### Dev Dependencies
 
+-   diff
 -   node-sass
 -   grunt-sass
 -   grunt-contrib-concat
@@ -41,7 +42,7 @@ npm init -y
 
 npm i grunt grunt-cli
 
-npm i -D node-sass grunt-sass grunt-contrib-concat gruntjs/grunt-contrib-uglify#harmony grunt-autoprefixer grunt-contrib-watch grunt-contrib-connect
+npm i -D diff node-sass grunt-sass grunt-contrib-concat gruntjs/grunt-contrib-uglify#harmony grunt-autoprefixer grunt-contrib-watch grunt-contrib-connect
 ```
 
 ---
